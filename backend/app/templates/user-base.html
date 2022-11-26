@@ -1,0 +1,16 @@
+<html>
+<head>
+    {#    <meta charset="UTF-8">#}
+    <title>Title</title>
+    <a href></a>
+    {% block content %}{% endblock %}
+</head>
+<div>
+    <a href="{{ url_for('main.entry') }}">Home</a>
+    <a href="{{ url_for('main.user', user_login=current_user.user_login) }}">Profile</a>
+    <a href="{{ url_for('main.adding.add_item' ) }}"> Create new Item</a>
+    <a href="{{ url_for('main.adding.add_category' ) }}"> Create new Category</a>
+    <a href="{{ url_for('main.adding.add_user' ) }}"> Create new User</a>
+</div>
+
+</html>

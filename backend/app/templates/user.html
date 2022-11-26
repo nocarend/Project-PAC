@@ -1,0 +1,17 @@
+{% extends "user-base.html" %}
+
+{% block content %}
+    <html>
+    <h1> user's account</h1>
+    {% for item in user.show_items() %}
+        <tr valign="top">
+            <td><br><img src="{{ item.get_item().avatar(32) }}"></td>
+            <td>
+                <b>{{ item.item_quantity }} {{ item.get_item().item_name }} {{ item.get_item()
+                .item_cost }}</b>
+            </td>
+        </tr>
+    {% endfor %}
+    {#    {{ user.show_items() }}#}
+    </html>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "user-base.html" %}
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ item.avatar(64) }}"></td>
+        </tr>
+    </table>
+    <html lang="en">
+    <h1> all users with this thing</h1>
+    {% for item in item.show_users() %}
+        <tr valign="top">
+            <td><br><b>{{ item.item_quantity }} {{ item.get_user().user_name }}</b>
+            </td>
+        </tr>
+    {% endfor %}
+    </html>
+{% endblock %}
