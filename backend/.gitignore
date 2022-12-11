@@ -264,3 +264,5 @@ test.db
 migrations/
 pyvenv.cfg
 tests.py
+Dockerfile
+Procfile
